@@ -1,35 +1,39 @@
-/* #1: This is my solution to the Codewars 8 kyu kata titled "Adults only: SQL for Beginners #1" */
+/* #1: This is my solution to the Codewars 8 kayu kata titled "Adults only: SQL for Beginners #1" */
 
 SELECT Name, Age FROM Users WHERE age >= 18
 
 
-/* #2: The following two code blocks, one original and one refactored, are my solutions to the Codewars 8 kyu kata 
-titled "Multiply" -- the SQL version */
+/* #2: This is my solution to the Codewars 8 kayu kata titled "Multiply" -- the SQL version */
 
 
-SELECT price + amount AS total FROM items
+/*SELECT price + amount AS total FROM items*/
 
 
-SELECT (price::float * amount::float) 
-AS total 
+SELECT (price::float * amount::float)
+AS total
 FROM items;
 
 
+/*OppositeNumber*/
+SELECT -number AS res FROM Opposite;
 
 
-/* #3: This is my solution to the Codewars 8 kyu kata titled "Easy SQL -- Ordering"*/
+
+
+
+/* #3: This is my solution to the Codewars 8 kayu kata titled "Easy SQL -- Ordering"*/
 
 SELECT * FROM companies ORDER BY employees DESC
 
 
-/* #4: This is my solution to the Codewars 8 kyu kata titled "Collect Tuition -- SQL for Beginners #4 "*/
+/* #4: This is my solution to the Codewars 8 kayu kata titled "Collect Tuition -- SQL for Beginners #4 "*/
 
 SELECT *
 FROM students
 WHERE tuition_received = false;
 
 
-/* #5: This is my solution to the Codewars 8 kyu kata titled "On the Canadian Border -- SQL for Beginners #2"*/
+/* #5: This is my solution to the Codewars 8 kayu kata titled "On the Canadian Border -- SQL for Beginners #2"*/
 
 SELECT *
 FROM travelers
@@ -38,15 +42,15 @@ WHERE country <> 'Canada' AND country <> 'Mexico' AND country <> 'US'
 
 
 
-/* #6: This is my solution to the Codewars 7 kyu kata titled "Countries Capitals for Trivia Night -- SQL for Beginners #6"*/
+/* #6: This is my solution to the Codewars 7 kayu kata titled "Countries Capitals for Trivia Night -- SQL for Beginners #6"*/
 
-SELECT capital 
+SELECT capital
 FROM countries
-WHERE (country LIKE 'E%') AND (continent LIKE 'Afri%') 
+WHERE (country LIKE 'E%') AND (continent LIKE 'Afri%')
 ORDER BY capital ASC
 LIMIT 3
 
-/* #7: This is my solution to the Codewars 8 kyu kata titled "Century from Year"*/
+/* #7: This is my solution to the Codewars 8 kayu kata titled "Century from Year"*/
 
 
 SELECT CEILING(yr/100.00) AS Century
@@ -54,15 +58,15 @@ FROM years
 
 
 
-/* #8: This is my solution to the Codewars 8 kyu kata titled "SQL Basics: Simple Min/Max" */
+/* #8: This is my solution to the Codewars 8 kayu kata titled "SQL Basics: Simple Min/Max" */
 
-SELECT 
+SELECT
       MIN(age) AS age_min,
       MAX(age) AS age_max
 FROM
     people
 
-/* #9: This is my solution to the Codewars 8 kyu kata titled "Easy SQL: Rounding Decimals" */
+/* #9: This is my solution to the Codewars 8 kayu kata titled "Easy SQL: Rounding Decimals" */
 
 
 SELECT
@@ -71,9 +75,18 @@ SELECT
 FROM
   decimals
 
+/* Is n divisible by x and y? */
 
-  /* #10 Here's a little something extra, the original inspiration for my Hogwarts Sorting Hat app idea, my solution to 
-  the Codewars 7 kyu kata titled "SQL with Harry Potter: Sorting Hat Comparators"
+
+SELECT Id,
+CASE
+  WHEN n % x = 0 AND n % y = 0 THEN true
+  ELSE false
+END
+AS res FROM kata;
+
+  /* #10 Here's a little something extra, the original inspiration for my Hogwarts Sorting Hat app idea, my solution to
+  the Codewars 7 kayu kata titled "SQL with Harry Potter: Sorting Hat Comparators"
 
 /* Oh you may not think I'm pretty,
 But don't judge on what you see,
