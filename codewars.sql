@@ -14,7 +14,7 @@ AS total
 FROM items;
 
 
-/*OppositeNumber*/
+/*Opposite Number*/
 SELECT -number AS res FROM Opposite;
 
 
